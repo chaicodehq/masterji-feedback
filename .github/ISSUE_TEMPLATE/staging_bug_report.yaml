@@ -19,12 +19,12 @@ body:
         Upon submission, the form clears the entered data instead of navigating to the confirmation page.
 
         ### Criteria for Bug Submission
-        **Only functional bugs should be reported.**
+        Only functional bugs should be reported.
 
-        - **Acceptable:** A feature is broken, a transaction fails, data integrity is compromised, or a workflow cannot be completed.
-        - **Unacceptable** (unless breaking functionality): Visual alignment issues, color discrepancies, font issues, or padding/margin problems.
+        Acceptable: A feature is broken, a transaction fails, data integrity is compromised, or a workflow cannot be completed.
+        Unacceptable (unless breaking functionality): Visual alignment issues, color discrepancies, font issues, or padding/margin problems.
 
-        **Exception:** You may report a UI-related bug only if it is actively breaking the functionality (e.g., a button is visually obscured and cannot be clicked, or a required field is not displayed, etc).
+        Exception: You may report a UI-related bug only if it is actively breaking the functionality (e.g., a button is visually obscured and cannot be clicked, or a required field is not displayed, etc).
 
   - type: input
     id: summary
@@ -50,49 +50,23 @@ body:
   - type: textarea
     id: expected
     attributes:
-      label: Expected Behavior
-      description: What did you expect to happen?
-      placeholder: "I expected to be redirected to the assignment details."
+      label: Expected
+      placeholder: "What should happen?"
 
   - type: textarea
     id: actual
     attributes:
-      label: Actual Behavior
-      description: What actually happened?
-      placeholder: "The page froze and nothing loaded."
+      label: Actual
+      placeholder: "What happened instead?"
 
   - type: input
     id: device
     attributes:
-      label: Device / Browser / Platform
-      description: Where did this occur? Mention device, OS, browser.
-      placeholder: "Windows 11, Chrome 123.0"
+      label: Device / Browser
+      placeholder: "e.g. Chrome on Mac"
 
   - type: textarea
     id: screenshots
     attributes:
-      label: Screenshots or Logs
-      description: Attach any relevant screenshots or console logs.
-      placeholder: "You can drag-and-drop images or paste logs here."
-
-  - type: textarea
-    id: additional
-    attributes:
-      label: Additional Info
-      description: Any other context, suggestions, or observations?
-      placeholder: "Only happens when I'm logged in..."
-
-  - type: markdown
-    attributes:
-      value: |
-        ---
-        ### Please Enter All New Bugs Below This Line
-
-  - type: textarea
-    id: bugs_list
-    attributes:
-      label: Bugs (list format)
-      description: For multiple bugs, enter each as a separate line. Use the structured fields above for detailed single-bug reports, or paste multiple bugs here.
-      placeholder: |
-        User is unable to save their profile after making changes to the 'About Me' section.
-        The system allows creation of a new entry without required fields being populated.
+      label: Screenshots
+      placeholder: "Paste or drag images here"
