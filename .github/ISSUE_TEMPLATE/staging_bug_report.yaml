@@ -1,6 +1,6 @@
 name: 🧪 Staging Bug Report
 description: Report functional bugs found during QA testing on Masterji Staging
-title: "[STAGING] - <brief summary>"
+title: "[STAGING] - <brief summary of the issue>"
 labels: [bug, staging, qa]
 
 body:
@@ -14,9 +14,9 @@ body:
         Please enter all functional bugs using an unordered list format. Each bug should be a distinct list item.
 
         **Example:**
-        - User is unable to save their profile after making changes to the 'About Me' section.
-        - The system allows creation of a new entry without required fields being populated.
-        - Upon submission, the form clears the entered data instead of navigating to the confirmation page.
+        User is unable to save their profile after making changes to the 'About Me' section.
+        The system allows creation of a new entry without required fields being populated.
+        Upon submission, the form clears the entered data instead of navigating to the confirmation page.
 
         ### Criteria for Bug Submission
         **Only functional bugs should be reported.**
@@ -26,14 +26,73 @@ body:
 
         **Exception:** You may report a UI-related bug only if it is actively breaking the functionality (e.g., a button is visually obscured and cannot be clicked, or a required field is not displayed, etc).
 
-  - type: textarea
-    id: bugs
+  - type: input
+    id: summary
     attributes:
-      label: Please Enter All New Bugs Below This Line
-      description: Enter each bug as a separate list item (use - at the start of each line).
-      placeholder: |
-        - [Describe first bug here]
-        - [Describe second bug here]
-        - [Describe third bug here]
+      label: Short Summary
+      description: Briefly describe the issue in one sentence.
+      placeholder: "The page crashes when clicking on 'Enroll Now'"
     validations:
       required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce the issue? Please list step-by-step. (Optional when using the bugs list below.)
+      placeholder: |
+        1. Go to the home page
+        2. Click on "Assignments"
+        3. Select "Web Dev React Assignment"
+        4. Click "Join"
+        5. Observe the crash
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+      placeholder: "I expected to be redirected to the assignment details."
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+      placeholder: "The page froze and nothing loaded."
+
+  - type: input
+    id: device
+    attributes:
+      label: Device / Browser / Platform
+      description: Where did this occur? Mention device, OS, browser.
+      placeholder: "Windows 11, Chrome 123.0"
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or Logs
+      description: Attach any relevant screenshots or console logs.
+      placeholder: "You can drag-and-drop images or paste logs here."
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Info
+      description: Any other context, suggestions, or observations?
+      placeholder: "Only happens when I'm logged in..."
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ### Please Enter All New Bugs Below This Line
+
+  - type: textarea
+    id: bugs_list
+    attributes:
+      label: Bugs (list format)
+      description: For multiple bugs, enter each as a separate line. Use the structured fields above for detailed single-bug reports, or paste multiple bugs here.
+      placeholder: |
+        User is unable to save their profile after making changes to the 'About Me' section.
+        The system allows creation of a new entry without required fields being populated.
