@@ -1,0 +1,39 @@
+name: 🧪 Staging Bug Report
+description: Report functional bugs found during QA testing on Masterji Staging
+title: "[STAGING] - <brief summary>"
+labels: [bug, staging, qa]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Short Note to QA Testers
+        This note outlines the required format and criteria for entering bugs into the Masterji Staging Bugs document.
+
+        ### Bug Entry Format
+        Please enter all functional bugs using an unordered list format. Each bug should be a distinct list item.
+
+        **Example:**
+        - User is unable to save their profile after making changes to the 'About Me' section.
+        - The system allows creation of a new entry without required fields being populated.
+        - Upon submission, the form clears the entered data instead of navigating to the confirmation page.
+
+        ### Criteria for Bug Submission
+        **Only functional bugs should be reported.**
+
+        - **Acceptable:** A feature is broken, a transaction fails, data integrity is compromised, or a workflow cannot be completed.
+        - **Unacceptable** (unless breaking functionality): Visual alignment issues, color discrepancies, font issues, or padding/margin problems.
+
+        **Exception:** You may report a UI-related bug only if it is actively breaking the functionality (e.g., a button is visually obscured and cannot be clicked, or a required field is not displayed, etc).
+
+  - type: textarea
+    id: bugs
+    attributes:
+      label: Please Enter All New Bugs Below This Line
+      description: Enter each bug as a separate list item (use - at the start of each line).
+      placeholder: |
+        - [Describe first bug here]
+        - [Describe second bug here]
+        - [Describe third bug here]
+    validations:
+      required: true
